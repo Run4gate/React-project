@@ -1,6 +1,7 @@
+import React from "react";
 import Searchbar from "../components/Searchbar";
-import './HomePage.css'
-import homeImg from '../assets/home.png'
+import './HomePage.css';
+import homeImg from '../assets/home.png';
 
 const HomePage = () => {
   return (

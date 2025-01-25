@@ -1,4 +1,5 @@
-import './Searchbar.css'
+import React from 'react';
+import './Searchbar.css';
 
 const Searchbar = () => { 
     return (
