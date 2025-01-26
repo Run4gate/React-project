@@ -1,34 +1,29 @@
 .homepage-wrapper{
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: center;
-    justify-content: center;
-    margin-top: 1em;
+    margin-top: 16px;
 }
 .homepage-logo{
-    width: 30em;
-    height: 30em;
+    width: 480px;
+    height: 480px;
     object-fit: contain;
 }
 
 .homepage-title{
     background-color: rgb(43, 74, 128);
-    padding: 1em;
+    padding: 16px;
     border-radius: 30px;
     color: #fff;
     border: 1px solid black;
 }
 .homepage-search_wrapper{
     color: #fff;
-    font-weight: 1.2em;
-    padding: 0.5em;
+    font-weight: 20px;
+    padding: 6px 16px;
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: center;
-    justify-content: center;
     background-color: rgb(43, 74, 128);
     border-radius: 30px;
     border: 1px solid black;
