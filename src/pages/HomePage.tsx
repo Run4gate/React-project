@@ -4,8 +4,7 @@ import homeImg from '../assets/home.png'
 
 const HomePage = () => {
   return (
-    <div className="container">
-      <div className="homepage-wrapper">
+      <div className="homepage-wrapper container">
         <h1 className="homepage-title">
           Welcome to the best Rick and Morty Website in all of the Multiverse
         </h1>
@@ -17,7 +16,6 @@ const HomePage = () => {
         <Searchbar />
         </div>
       </div>
-    </div>
   );
 };
 export default HomePage;
