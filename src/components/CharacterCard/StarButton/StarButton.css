@@ -1,0 +1,21 @@
+
+
+.star-btn-label > input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.star-btn-label > .star-btn-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/star_empty.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.star-btn-label > input:checked + .star-btn-icon {
+    background-image: url(assets/star_filled.png);
+}

@@ -1,0 +1,85 @@
+.c-card-container {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 74, 128);
+    border-radius: 15px;
+    border: solid;
+    border-width: 1px;
+    border-color: hsl(218, 50%, 20%);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    transition: box-shadow .12s ease-in;
+}
+.c-card-container:hover {
+    box-shadow: 0 0 10px 2px rgb(191, 222, 66);
+}
+
+
+.c-card-spinner {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+
+.c-card-fav {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    margin: 10%;
+}
+.c-card-container > .c-card-fav > .star-btn-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .15s ease-in;
+}
+.c-card-container:hover > .c-card-fav > .star-btn-icon {
+    visibility: visible;
+    opacity: 0.7;
+}
+.c-card-container > .c-card-fav > input:checked + .star-btn-icon {
+    visibility: visible;
+    opacity: 0.7;
+    transition: opacity .1s ease-in;
+}
+
+
+
+.c-card-image {
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+
+.c-card-link {
+    z-index: 1;
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+    display: flex;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    --c1: rgba(43, 74, 128, 0.9);
+    --c2: rgba(43, 74, 128, 0.45);
+    --c3: rgba(43, 74, 128, 0);
+    background: linear-gradient(to top, var(--c1) 0%, var(--c2) 80%, var(--c3) 95%);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    cursor: pointer;
+}
+.c-card-link > span {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
