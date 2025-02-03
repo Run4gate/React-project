@@ -1,0 +1,41 @@
+
+.favorite-btn-label > input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.favorite-btn-label > span {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    background-color: gold;
+    color: white;
+    padding: 10px;
+    font-size:x-large;
+    font-weight: 600;
+    text-shadow: hsl(51, 100%, 25%) 0 0 6px;
+    text-align: center;
+    border: solid;
+    border-color: gold;
+    border-width: 3px;
+    border-radius: 12px;
+    user-select: none;
+    transition: background-color 0.12s ease-in,
+        box-shadow 0.12s ease-in;
+}
+
+.favorite-btn-label:hover > span {
+    background-color: hsl(51, 100%, 65%);
+    box-shadow: inset hsl(51, 100%, 40%) 0 0 8px;
+}
+
+.favorite-btn-label > input:checked + span {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    color: gold;
+    border: solid;
+    border-width: 3px;
+    text-shadow: hsl(51, 100%, 50%) 0 0 6px;
+    border-color: gold;
+}

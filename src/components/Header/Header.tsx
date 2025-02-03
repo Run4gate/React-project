@@ -2,20 +2,30 @@ import "./Header.css";
 import { SvgIcon } from "../../assets";
 import { NavLink } from "react-router";
 import { PATHS } from "../../utils/constants";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../store/authSlice";
+import { loginUser, isAuth } from "../../utils/selectors";
 
-type HeaderProps = {
-  isAuth?: boolean;
-  userName?: string;
-};
 
-export const Header = ({ isAuth, userName }: HeaderProps) => 
-  (
+export const Header = () => {
+
+  const user = useSelector(loginUser)
+  const isAuthenticated = useSelector(isAuth)
+  const dispatch = useDispatch()
+
+  const username = user?.username ?? "Guest"
+
+  const handleLogout = () => {
+    dispatch(logout())
+  }
+
+  return (
     <header className="header">
       <div className="container header_wrapper">
         <NavLink to={PATHS.HOME}>
           <SvgIcon />
         </NavLink>
-        {isAuth ? (
+        {isAuthenticated ? (
           <div className="header_buttons">
             <NavLink className="header_button" to={PATHS.FAVORITES}>
               Favorites
@@ -23,8 +33,8 @@ export const Header = ({ isAuth, userName }: HeaderProps) =>
             <NavLink className="header_button" to={PATHS.HISTORY}>
               History
             </NavLink>
-            <p className="header_username">Hi, {userName}</p>
-            <button className="header_button">Logout</button>
+            <p className="header_username">Hi, {username}</p>
+            <button onClick={handleLogout} className="header_button">Logout</button>
           </div>
         ) : (
           <div className="header_buttons">
@@ -39,3 +49,4 @@ export const Header = ({ isAuth, userName }: HeaderProps) =>
       </div>
     </header>
   );
+};

@@ -1,1 +1,1 @@
-export {HeaderContainer as Header} from "./HeaderContainer.tsx";
+export {Header} from "./Header"

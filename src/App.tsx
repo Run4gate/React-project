@@ -1,10 +1,9 @@
 import "./App.css";
 import { AppRouter } from "./components/AppRouter";
 
-function App() {
+export function App() {
   return (
     <AppRouter/>
   )
 }
 
-export default App;
