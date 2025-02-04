@@ -1,5 +1,5 @@
 import "./Header.css";
-import Logo from "../../assets/logo";
+import { SvgIcon } from "../../assets/logo";
 import { NavLink } from "react-router";
 import { PATHS } from "../../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,7 +23,7 @@ export const Header = () => {
     <header className="header">
       <div className="container header_wrapper">
         <NavLink to={PATHS.HOME}>
-          <Logo />
+          <SvgIcon />
         </NavLink>
         {isAuthenticated ? (
           <div className="header_buttons">

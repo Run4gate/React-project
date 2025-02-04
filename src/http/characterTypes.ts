@@ -36,9 +36,7 @@ export type CharacterResponse = {
 }
 
 export type TypeFilters = {
-    name?: string;
-    status?: 'alive' | 'dead' | 'unknown';
-    species?: string;
-    type?: string;
-    gender?: 'male' | 'female' | 'genderless' | 'unknown';
+    name: string;
+    status?: '' | 'alive' | 'dead' | 'unknown';
+    gender?: '' | 'male' | 'female' | 'genderless' | 'unknown';
 }

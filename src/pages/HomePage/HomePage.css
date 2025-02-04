@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 16px;
 }
 .homepage-logo{
     width: 480px;

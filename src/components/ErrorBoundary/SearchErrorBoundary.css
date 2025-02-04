@@ -1,0 +1,28 @@
+.searchBoundary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.searchBoundary_title {
+    background-color: rgb(105, 21, 21);
+    padding: 16px;
+    border-radius: 30px;
+    color: #fff;
+    border: 1px solid black;
+}
+
+.searchBoundary_button {
+    background-color: rgb(105, 202, 121);
+    padding: 16px;
+    border-radius: 30px;
+    color: #fff;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.searchBoundary_button:hover {
+    transform: scale(1.2);
+}

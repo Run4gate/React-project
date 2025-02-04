@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const SvgIcon: React.FC<React.SVGProps<SVGElement>> = () => (
+export const SvgIcon: React.FC<React.SVGProps<SVGElement>> = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="svg438"
@@ -221,5 +221,3 @@ const SvgIcon: React.FC<React.SVGProps<SVGElement>> = () => (
     </g>
   </svg>
 );
-
-export default SvgIcon;

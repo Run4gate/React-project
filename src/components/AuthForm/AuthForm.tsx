@@ -5,7 +5,7 @@ import { PATHS } from "../../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, registerUser } from "../../store/authSlice";
 import { authValidationSchema, signInValidationSchema } from "../../utils/validationSchemes";
-import { error } from "../../utils/selectors";
+import { error as authError } from "../../utils/selectors";
 
 type AuthFormType = {
   type: "signin" | "signup";
@@ -14,7 +14,7 @@ type AuthFormType = {
 export const AuthForm = ({ type }: AuthFormType) => {
   const isSignup = type === "signup";
 
-  const errorMessage = useSelector(error);
+  const error = useSelector(authError);
   const dispatch = useDispatch();
 
   type FormValues = {
@@ -26,6 +26,8 @@ export const AuthForm = ({ type }: AuthFormType) => {
       username: "",
       password: "",
     },
+    validationSchema: isSignup ? authValidationSchema : signInValidationSchema,
+    enableReinitialize: true,
     validationSchema: isSignup ? authValidationSchema : signInValidationSchema,
     enableReinitialize: true,
     onSubmit: (values) => {
@@ -68,6 +70,7 @@ export const AuthForm = ({ type }: AuthFormType) => {
             value={formik.values.password}
             className="sign_input"
             type="password"
+            type="password"
             name="password"
           />
           {formik.touched.password && formik.errors.password && (
@@ -80,13 +83,15 @@ export const AuthForm = ({ type }: AuthFormType) => {
         {isSignup ? (
           <p className="link">
             Already registered? <NavLink to={PATHS.SIGNIN}>Sign In</NavLink>
+            Already registered? <NavLink to={PATHS.SIGNIN}>Sign In</NavLink>
           </p>
         ) : (
           <p className="link">
             New here? <NavLink to={PATHS.SIGNUP}>Sign Up</NavLink>
+            New here? <NavLink to={PATHS.SIGNUP}>Sign Up</NavLink>
           </p>
         )}
-        <span className="error">{errorMessage}</span>
+        <span className="error">{error}</span>
       </div>
     </div>
   );
