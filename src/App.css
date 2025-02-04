@@ -13,3 +13,30 @@ body {
     padding: 0 10px;
     margin: 0 auto;
 }
+button {
+    /* Remove default browser styling */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Remove borders, background, and padding */
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  
+    /* Reset font styling (optional) */
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  
+    /* Remove focus outline (replace with accessible styling) */
+    outline: none;
+  
+    /* Remove platform-specific quirks */
+    -webkit-tap-highlight-color: transparent; /* Mobile tap highlight */
+}
+
+ul {
+    list-style: none;
+}

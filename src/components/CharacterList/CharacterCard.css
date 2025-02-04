@@ -1,0 +1,15 @@
+.character-card {
+    align-content: end;
+    align-items: end;
+    border-radius: 35px 15px;
+}
+
+.character-card_title {
+    background-color: rgba(128, 128, 128, 0.5);
+    margin: 0;
+    height: 20%;
+    border-radius: 0px 0px 35px 15px;
+    padding: 10px;
+    text-align: start;
+    align-content: center;
+}

@@ -37,8 +37,11 @@
     transition: transform .2s ease-in-out;
 }
 
+.header_button.active {
+    color: rgb(191, 222, 66);
+}
+
 .header_button:hover {
     transform: scale(1.05);
     cursor: pointer;
-
 }

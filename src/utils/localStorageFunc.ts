@@ -1,7 +1,10 @@
+import { TypeFilters } from "../http/characterTypes";
+
 export type User = {
     username: string;
     password: string;
 };
+
 
 export const loadUsersFromLocalStorage = (): User[] => {
     return JSON.parse(localStorage.getItem("users") || "[]");
@@ -24,6 +27,14 @@ export const saveUsersToLocalStorage = (users: User[]) => {
     localStorage.setItem("users", JSON.stringify(users));
 };
 
-export const removeItemFromLocalStorage = (user: string) => {
-    localStorage.removeItem(user);
+export const removeItemFromLocalStorage = (item: string) => {
+    localStorage.removeItem(item);
 };
+
+export const saveSearchConfigToLocalStorage = (searchConfig: TypeFilters[]) => {
+    localStorage.setItem("searchHistory", JSON.stringify(searchConfig))
+}
+
+export const loadSearchConfigFromLocalStorage = (): TypeFilters[] => {
+    return JSON.parse(localStorage.getItem("searchHistory") || "[]");
+}

@@ -1,0 +1,38 @@
+.character-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.character-slider_items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, minmax(250px, 1fr));
+  row-gap: 40px;
+  column-gap: 40px;
+  max-width: 80%;
+  border-top: 3px solid rgb(43, 74, 128);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.character-slider_button-back {
+  max-width: 5%;
+  max-height: 5%;
+  cursor: pointer;
+}
+.character-slider_button-forward {
+  max-width: 5%;
+  max-height: 5%;
+  rotate: 180deg;
+  cursor: pointer;
+}
+.character-slider_button-back svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.character-slider_button-forward svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
